@@ -1,81 +1,75 @@
 # AI-Uprising-Code-or-be-Coded
 
-A text-based Java adventure game where the player navigates an AI-controlled facility, solves puzzles, and tries to survive the mission.
+A polished Java console adventure where the player navigates an AI-controlled facility, solves puzzles, and attempts to survive a dangerous mission.
 
 ## Overview
 
-`AI Uprising: Code or Be Coded` is a console game built with plain Java. The player starts at a control menu, moves through a laser grid, makes story decisions, and can face a riddle challenge before reaching the AI core.
+`AI Uprising: Code or Be Coded` is a clean, text-based Java game built for the terminal. The player explores a 5x5 laser grid, chooses story branches, and faces an optional riddle challenge on the way to the AI core.
 
 ## Key Features
 
-- 5x5 laser grid explorer with health penalties.
-- Multiple story choices that change the mission path.
-- Randomized success/failure for many actions.
-- Final score saving to a high score file.
-- Colored terminal output using ANSI escape codes.
-- Riddle challenge that loads questions from `riddles.txt`.
+- 5x5 laser grid exploration with health management.
+- Branching narrative choices that affect mission progress.
+- Randomized success and failure for replay value.
+- Persistent high scores saved to a local file.
+- ANSI-colored terminal output for better visual clarity.
+- Integrated riddle challenge using `riddles.txt`.
+
+## Riddle Content
+
+This project includes a curated riddle set with short logic and wordplay challenges. The game loads and shuffles these questions from `riddles.txt`.
+
+The included riddles cover:
+- classic object and nature riddles (`fire`, `map`, `light`)
+- everyday object puzzles (`keyboard`, `coin`, `egg`)
+- time and motion brainteasers (`clock`, `future`)
+- wordplay and pattern logic (`promise`, `echo`, `stamp`, `candle`)
+- repeated challenge entries for familiarity and replayability (`footsteps`)
 
 ## Project Files
 
-- `AIUprisingGame.java` - Main game program and flow logic.
-- `HighScores.java` - Reads, writes, sorts, and displays the top high scores.
-- `ConsoleColors.java` - ANSI color definitions for console output.
-- `riddles.txt` - Riddle questions and answers used in the game.
-- `highscores.txt` - Stored top scores when the game is played.
+- `AIUprisingGame.java` - main game loop, story flow, grid navigation, and riddle handling.
+- `HighScores.java` - loads, saves, sorts, and displays the best player scores.
+- `ConsoleColors.java` - ANSI terminal color definitions used throughout the game.
+- `riddles.txt` - stored riddle questions and answers in a simple `Question : answer` format.
+- `highscores.txt` - auto-generated file for persistent score tracking.
 
 ## Requirements
 
-- Java JDK installed (`javac` and `java` commands available).
-- Terminal or command prompt to run the game.
-- `riddles.txt` must remain in the project folder.
+- Java JDK installed and available on the command line.
+- Terminal or command prompt capable of running Java programs.
+- `riddles.txt` present in the same folder as the `.java` files.
 
-## How to Run
+## Run Instructions
 
-Open a terminal in the project folder and run:
+From the project folder, compile and launch the game:
 
 ```bash
 javac AIUprisingGame.java HighScores.java ConsoleColors.java
 java AIUprisingGame
 ```
 
-If the files are in `AI-Uprising-Code-or-be-Coded`, run the commands from inside that folder.
+## Gameplay Summary
 
-## How to Play
-
-1. Choose `1` to start a new game.
-2. Navigate the laser grid using:
+1. Select `1` to begin a new game.
+2. Move through the laser grid using:
    - `U` = Up
    - `D` = Down
    - `L` = Left
    - `R` = Right
-3. Avoid lasers when possible or lose health.
-4. Reach the exit and choose your next strategy.
-5. Continue through the story choices, retrying if health remains.
-6. If you succeed, enter your name to save your high score.
-
-## Game Mechanics
-
-- `health` starts at 100.
-- Each laser hit subtracts health.
-- Several actions use random success/failure.
-- The mission can end in success or game over.
-- Successfully finishing the game updates `highscores.txt`.
-
-## Riddles
-
-- `riddles.txt` stores riddles in this format:
-  `Question : answer`
-- The game randomly shuffles these and quizzes you.
-- Enter the correct answer exactly as text.
+3. Avoid or survive laser hits to preserve health.
+4. Continue through the story and make strategic choices.
+5. Answer a randomized riddle when prompted.
+6. Reach the AI core and save your score if successful.
 
 ## Notes
 
-- The game uses ANSI colors, so colors work best in terminals that support them.
-- `highscores.txt` is created automatically if it does not exist.
-- This project uses the default Java package, so no package folder structure is required.
+- Terminal color output works best in consoles that support ANSI escape codes.
+- `highscores.txt` is created automatically when a game completes.
+- No Java package structure is required; all source files are in the same folder.
 
 ## Tips
 
-- Play multiple times to see different outcomes because many choices are random.
-- Use `2` from the main menu to view high scores.
-- If the game crashes, make sure `riddles.txt` is present in the same folder as the `.java` files.
+- Replay the game to explore alternate paths and outcomes.
+- Use option `2` in the menu to review the current high scores.
+- Ensure `riddles.txt` remains available in the game folder to avoid missing content.
